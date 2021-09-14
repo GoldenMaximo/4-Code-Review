@@ -19,7 +19,11 @@ export default function Home() {
         repositoryName: 'node',
     });
 
-    const { isLoading: isGetApodLoading, data: resultFromGetApodQuery } = useGetApodQuery(
+    const {
+        isLoading: isGetApodLoading,
+        data: resultFromGetApodQuery,
+        refetch: refetchApodQuery,
+    } = useGetApodQuery(
         process.env.NEXT_PUBLIC_NASA_APOD_KEY
             ? {
                   apiKey: process.env.NEXT_PUBLIC_NASA_APOD_KEY,
@@ -31,6 +35,7 @@ export default function Home() {
     const handlePaginationChange = useCallback((page: number, pageSize?: number | undefined) => {
         setCurrentPage(page);
         pageSize && setReposPerPage(pageSize);
+        process.env.NEXT_PUBLIC_NASA_APOD_KEY && refetchApodQuery();
     }, []);
 
     console.log('here yo: ', resultFromGetApodQuery);

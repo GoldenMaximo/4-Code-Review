@@ -1,4 +1,6 @@
-## <challenge> Frontend Developer </challenge>
+# For Code Review
+
+> A client-side application that queries the GitHub API with a little bit of NASA imagery sprinkled on top.
 
 #### Built with:
 
@@ -7,7 +9,9 @@
 -   [Next.js](https://nextjs.org/) - React Framework.
 -   [Ant Design](https://ant.design/) - Design system / Components lib.
 -   [Redux Toolkit](https://redux-toolkit.js.org/) - State & services/API management.
-<!-- -   [Styled-Components](https://styled-components.com/) - CSS-in-JS solution. -->
+-   [Styled-Components](https://styled-components.com/) - CSS-in-JS solution.
+-   [GitHub API](https://docs.github.com/en/rest) - Used to query repos, issues and stuff alike.
+-   [NASA APOD API](https://github.com/nasa/apod-api) - Used to query images.
 
 ## Installation
 
@@ -51,5 +55,5 @@ This project has no testing yet.
 
 This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill.
 It is a good example of how I would normally code and perform on real applications.
-Another version of this same project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query).
-I chose to redo this project concept as the previous creation does not accurately represent my abilities and stack preferences anymore, keep in mind, however, that this project does not also fully represent these points either, it is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent of a real final product.
+A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) altough bear in mind that it does not accurately represent my abilities and stack preferences anymore.
+This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent of a real final product.

@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { FunctionComponent } from 'react';
 import { Avatar, List, Space, Image, Tooltip, Spin } from 'antd';
 import {
     ExclamationCircleOutlined,
@@ -9,8 +9,8 @@ import {
 
 import * as S from './styles';
 
-import { IRepository } from '../../../interfaces/repositories/IRepository';
-import { IApod } from '../../../interfaces/apod/IApod';
+import { IRepository } from '../../../../interfaces/repositories/IRepository';
+import { IApod } from '../../../../interfaces/apod/IApod';
 
 const texts = Object.freeze({
     a: 'Stargazers Count',
@@ -102,8 +102,8 @@ export const ListItem = ({
         >
             <List.Item.Meta
                 avatar={<Avatar src={repositoryData.owner.avatar_url} />}
-                title={<a href={repositoryData.owner.url}>{repositoryData.owner.login}</a>}
-                description={repositoryData.description}
+                title={<a href={repositoryData.owner.html_url}>{repositoryData.name}</a>}
+                description={repositoryData.owner.login}
             />
             {repositoryData.description}
         </List.Item>

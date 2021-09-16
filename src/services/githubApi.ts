@@ -28,6 +28,7 @@ export const githubApi = createApi({
             query: ({ repositoryName, perPage, currentPage }: IRepositoryQueryData) =>
                 `repositories?q=${repositoryName}&per_page=${perPage}&page=${currentPage}`,
         }),
+        // TODO: Future implementation maybe? Perhaps another page showing the repo's issues or something.
         getIssues: builder.query<IRepoIssuesQueryResponse, IRepoIssuesData>({
             query: ({ userName, repositoryName, perPage, currentPage }: IRepoIssuesData) =>
                 `issues?q=repo:${userName}/${repositoryName}&per_page=${perPage}&page=${currentPage}`,

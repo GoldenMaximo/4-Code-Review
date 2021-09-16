@@ -8,7 +8,8 @@ export const store = configureStore({
         [githubApi.reducerPath]: githubApi.reducer,
         [nasaApi.reducerPath]: nasaApi.reducer,
     },
-    middleware: getDefaultMiddleware => getDefaultMiddleware().concat(githubApi.middleware),
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware().concat(githubApi.middleware, nasaApi.middleware),
 });
 
 setupListeners(store.dispatch);

@@ -1,4 +1,4 @@
-# For Code Review
+# 4-Code-Review (GitHub Repo Search App)
 
 > A client-side application that queries the GitHub API with a little bit of NASA imagery sprinkled on top.
 
@@ -25,11 +25,17 @@ _Make sure to have [Git](http://git-scm.com/) and [Node.js](http://nodejs.org/) 
 npm install
 ```
 
-3. Create an .env file with the following properties:
+3. (OPTIONAL) Get yourself a [NASA API key](https://api.nasa.gov/) or use my own (avaliable upon request).
+
+4. Create an .env file with the following properties:
 
 ```
 NEXT_PUBLIC_GITHUB_SEARCH_ENDPOINT=* (E.g.: https://api.github.com/search/)
+NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT=* (E.g: https://api.nasa.gov/planetary/)
+NEXT_PUBLIC_NASA_APOD_KEY=*
 ```
+
+_The planetary endpoint could very well be fixed however, setting all endpoints on .env is a project pattern I impose._
 
 ## Running
 
@@ -50,6 +56,32 @@ _This will start the server at `localhost:3000`_
 ## Testing
 
 This project has no testing yet.
+
+## Known issues
+
+-   [NASA's APOD API is somewhat slow and will sometimes throw 504 GATEWAY_TIMEOUT.](https://github.com/nasa/apod-api#api-reliability)
+-   NASA's APOD API video results that are hosted on 'https://apod.nasa.gov/' won't play because they set 'X-Frame-Options' to 'sameorigin'.
+-   [Next.js will sometimes give a server side warning about Ant Design trying to use useLayoutEffect under the hood.](https://github.com/ant-design/ant-design/issues/30396)
+
+## Things to keep in mind for further development
+
+-   Pages must have .page.tsx exention.
+-   Do not create /components level components unless you plan to use them in more than one page/component.
+-   Texts are stored in `texts` object variables with alphabet letters as key and text as value, it sucks but I haven't found anything better yet. Alternative pattern suggestions are welcome.
+
+## Things to keep in mind for audit
+
+-   Brave Browser and other privacy oriented browsers will block stuff from NASA's embedded videos, filling up the console with "blocked by client" errors.
+
+## Useful links that weighed heavily on key technical decisions / Project direction & patterns.
+
+-   [Why would I need to freeze an object in JavaScript?](https://stackoverflow.com/q/14791302/10088643)
+-   [Any performance benefit to "locking down" JavaScript objects?](https://stackoverflow.com/q/8435080/10088643)
+-   [When should you NOT use React memo?](https://stackoverflow.com/questions/53074551/when-should-you-not-use-react-memo)
+
+## Performance
+
+TODO: Performance audit
 
 ## Meta
 

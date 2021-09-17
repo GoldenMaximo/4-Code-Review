@@ -58,7 +58,7 @@ context('E2E', () => {
             cy.wait('@githubSearchEndpoint').then(interception => {
                 assert.isNotNull(interception.response.body, '5th API call has data');
 
-                cy.get('.ant-list li').first().get('a').contains('react');
+                cy.wait(200).get('.ant-list li').first().get('a').contains('react');
             });
 
             cy.get('[aria-label="home"]').parent().click();

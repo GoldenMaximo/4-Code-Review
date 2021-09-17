@@ -2,7 +2,7 @@
 
 context('E2E', () => {
     describe('Single pass through the entire app', () => {
-        it('should search for good stuff', () => {
+        it('Should search for node then search for react then go back to the home screen', () => {
             cy.intercept({
                 method: 'GET',
                 url: `${Cypress.env('githubSearchEndpoint')}*`,

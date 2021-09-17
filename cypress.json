@@ -1,0 +1,8 @@
+{
+    "projectId": "p21ze9",
+    "env": {
+        "port": "3000",
+        "githubSearchEndpoint": "https://api.github.com/search/",
+        "nasaPlanetaryEndpoint": "https://api.nasa.gov/planetary/"
+    }
+}

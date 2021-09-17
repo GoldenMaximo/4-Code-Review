@@ -11,7 +11,9 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
-          build: npm run build
+          install: yarn
+          build: yarn build
+          start: yarn start
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
           record: true

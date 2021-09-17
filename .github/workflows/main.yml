@@ -10,3 +10,13 @@ jobs:
       # and run all Cypress tests
       - name: Cypress run
         uses: cypress-io/github-action@v2
+        with:
+          install-command: yarn
+          start: yarn start
+          wait-on: 'http://localhost:3000'
+          wait-on-timeout: 120
+          record: true
+        env:
+          NEXT_PUBLIC_GITHUB_SEARCH_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GITHUB_SEARCH_ENDPOINT }}
+          NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT: ${{ secrets.NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT }}
+          NEXT_PUBLIC_NASA_APOD_KEY: ${{ secrets.NEXT_PUBLIC_NASA_APOD_KEY }}

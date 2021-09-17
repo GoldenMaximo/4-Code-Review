@@ -11,9 +11,7 @@ jobs:
       - name: Cypress.io
         uses: cypress-io/github-action@v2.9.7
         with:
-          install-command: npm install
           build: npm run build
-          start: npm start
           wait-on: 'http://localhost:3000'
           wait-on-timeout: 120
           record: true
@@ -21,3 +19,4 @@ jobs:
           NEXT_PUBLIC_GITHUB_SEARCH_ENDPOINT: ${{ secrets.NEXT_PUBLIC_GITHUB_SEARCH_ENDPOINT }}
           NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT: ${{ secrets.NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT }}
           NEXT_PUBLIC_NASA_APOD_KEY: ${{ secrets.NEXT_PUBLIC_NASA_APOD_KEY }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}

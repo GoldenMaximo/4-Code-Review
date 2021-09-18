@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { skipToken } from '@reduxjs/toolkit/dist/query/react';
-import { List, Spin } from 'antd';
+import { Spin } from 'antd';
 
 import { useGetReposQuery } from '../../services/githubApi';
 import { useGetApodQuery } from '../../services/nasaApi';

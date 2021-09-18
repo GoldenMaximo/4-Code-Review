@@ -11,6 +11,7 @@ import { ListFooter } from './components/ListFooter';
 
 import * as S from './styles';
 import { IRepository } from '../../interfaces/repositories/IRepository';
+import { Illustration } from '../../components/Illustration';
 
 const defaultPerPage = 10;
 
@@ -24,6 +25,7 @@ export default function Search() {
         return Object.freeze({
             a: 'Results page',
             b: `Showing results for: ${repositoryName}`,
+            c: 'Nothing here... Try checking your internet connection or look up another repo name.',
         });
     }, [repositoryName]);
 
@@ -98,22 +100,28 @@ export default function Search() {
             {isGetReposLoading ? (
                 <Spin />
             ) : (
-                <S.StyledList
-                    itemLayout="vertical"
-                    size="large"
-                    pagination={listPagination}
-                    dataSource={resultFromGetReposQuery?.items}
-                    footer={<ListFooter />}
-                    renderItem={(repositoryData, index) => (
-                        <ListItem
-                            // renderItem params cannot be typed with custom types
-                            // hence the manual typing here
-                            repositoryData={repositoryData as IRepository}
-                            apodIsLoading={isGetApodLoading}
-                            apodData={resultFromGetApodQuery?.[index]}
+                <>
+                    {resultFromGetReposQuery?.items.length ? (
+                        <S.StyledList
+                            itemLayout="vertical"
+                            size="large"
+                            pagination={listPagination}
+                            dataSource={resultFromGetReposQuery.items}
+                            footer={<ListFooter />}
+                            renderItem={(repositoryData, index) => (
+                                <ListItem
+                                    // renderItem params cannot be typed with custom types
+                                    // hence the manual typing here
+                                    repositoryData={repositoryData as IRepository}
+                                    apodIsLoading={isGetApodLoading}
+                                    apodData={resultFromGetApodQuery?.[index]}
+                                />
+                            )}
                         />
+                    ) : (
+                        <Illustration fileName="empty" description={texts.c} />
                     )}
-                />
+                </>
             )}
         </SearchLayout>
     );

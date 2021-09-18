@@ -1,4 +1,3 @@
-import { memo } from 'react';
 import { Typography } from 'antd';
 const { Text } = Typography;
 
@@ -20,7 +19,7 @@ const textStyle = Object.freeze({
 
 const FooterComponent = () => (
     <S.StyledFooter>
-        <a href={texts.b} target="_blank">
+        <a href={texts.b} target="_blank" rel="noreferrer">
             <Text style={textStyle}>{texts.a}</Text>
         </a>
     </S.StyledFooter>

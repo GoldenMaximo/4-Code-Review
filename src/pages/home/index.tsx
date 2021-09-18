@@ -4,8 +4,9 @@ const { Title } = Typography;
 import { Footer, PageTitleAndDescription, SearchBar } from '../../components';
 
 const texts = Object.freeze({
-    a: 'GitHub Repo Search - 4-Code-Review',
-    b: 'Search for repositories',
+    a: '4-Code-Review',
+    b: 'GitHub Repo Search',
+    c: 'Search for repositories',
 });
 
 import * as S from './styles';
@@ -17,6 +18,7 @@ export default function Home() {
             <S.HomeLayout>
                 <S.ContentContainer>
                     <Title>{texts.a}</Title>
+                    <Title level={3}>{texts.b}</Title>
                     <S.InputContainer>
                         <SearchBar size="large" />
                     </S.InputContainer>

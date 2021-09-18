@@ -15,16 +15,20 @@ export const HomeLayout = styled.div`
 
 export const ContentContainer = styled(Content)`
     width: 100%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
+
     background: ${Colors.lightBackground};
 `;
 
 export const InputContainer = styled.div`
-    width: 45vw;
+    width: clamp(min(95%, 335px), 45%, 999px);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 1rem;
 `;

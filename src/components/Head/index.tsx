@@ -17,7 +17,7 @@ const PageTitleAndDescriptionComponent = ({
     return (
         <Head>
             <title>{texts.a}</title>
-            <meta name="theme-color" content="#4285f4" />
+            <meta name="theme-color" content="#001529" />
             <meta name="description" content={pageDescription} />
             <meta property="og:title" content={texts.a} />
             <link rel="manifest" href="/manifest.json" />

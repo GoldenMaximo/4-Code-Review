@@ -2,7 +2,13 @@
 
 > A client-side application that queries the GitHub API with a little bit of NASA imagery sprinkled on top.
 
-#### Built with:
+## [:fire: Deployed HERE :fire:](https://4-code-review.vercel.app/)
+
+## DEMO:
+
+![](demo/desktop_demo.gif)
+
+## Built with:
 
 -   [TypeScript](https://www.typescriptlang.org/) - Language used for the project.
 -   [React.js](https://nodejs.org/en/) - JavaScript Framework.
@@ -95,27 +101,49 @@ npm run e2e:headless
 
 ## Performance
 
-TODO: Performance audit
+_Performance metrics were measured with the help of [DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse/)._
+
+![](demo/DevTools_Lighthouse_Score.png)
+
+Here's a performance snapshot of the entire flow of the app:
+
+![](demo/DevTools_Performance_Snapshot_Of_Whole_App.png)
 
 ## Mobile & PWA
 
-TODO: https://developer.mozilla.org/en-US/docs/Web/Manifest?utm_source=devtools&utm_medium=sw-panel-blank
+This project supports PWA:
+
+![](demo/pwa_demo.jpg)
+
+![](demo/pwa_demo_2.png)
+
+#### Mobile responsiveness:
+
+![](demo/mobile_android_demo.gif)
 
 ## CI/CD
 
 ### CI
 
-Continuous Integration is done using Cypress together with [GitHub Actions](https://github.com/features/actions), you can check out the project's runs @ its [Cypress Dashboard](https://dashboard.cypress.io/projects/p21ze9/)
+Continuous Integration is done using Cypress together with [GitHub Actions](https://github.com/features/actions), you can check out the project's runs @ its [Cypress Dashboard](https://dashboard.cypress.io/projects/p21ze9/).
 
 ### CD
 
-Continuous Delivery is done using [Vercel for GitHub](https://github.com/apps/vercel)
+Continuous Delivery is done using [Vercel for GitHub](https://github.com/apps/vercel).
+
+## Security
+
+Project security oversight is done by [Snyk](https://snyk.io/).
+Good doggo, barks whenever there's a security issue and bites the hell out of vulnerabilities.
+
+_As of right now there is only one known vulnerability in the project caused by [next-pwa](https://www.npmjs.com/package/next-pwa), Snyk does not have a fix for it yet. So if you want to hack the project, I just gave you a clue..._
 
 ## Known issues
 
 -   [NASA's APOD API is somewhat slow and will sometimes throw 504 GATEWAY_TIMEOUT.](https://github.com/nasa/apod-api#api-reliability)
 -   NASA's APOD API video results that are hosted on 'https://apod.nasa.gov/' won't play because they set 'X-Frame-Options' to 'sameorigin'.
 -   [Next.js will sometimes give a server-side warning about Ant Design trying to use useLayoutEffect under the hood.](https://github.com/ant-design/ant-design/issues/30396)
+-   Offline fallback on PWA with [next-pwa](https://www.npmjs.com/package/next-pwa) SUCKS. There are various issues on their repo about this and I couldn't get it to work properly myself. Maybe in the future I'll open an issue there. For now having an illustration on the `/search` page is enough for me.
 
 ## Things to keep in mind for further development
 
@@ -126,6 +154,7 @@ Continuous Delivery is done using [Vercel for GitHub](https://github.com/apps/ve
 -   Testing could be better, the project lacks unit testing and has extremely limited coverage of edge cases by the current integration/e2e testing done with Cypress.
 -   Commits must be done following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
 -   If more than one person ever works in this project, ideally I would prefer that all GIT management be done following [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
+-   Cypress CI queries for a `package-lock.json` that matches the project's `package.json` during the CI build phase. Meaning that, while you could use pnpm and yarn to manage dependencies, you'll always have to make sure that the project's `package-lock.json` is up to date. It's a hassle to the point it made me abandon pnpm/yarn and just use npm instead.
 
 ## Things to keep in mind for auditing
 
@@ -145,4 +174,4 @@ Continuous Delivery is done using [Vercel for GitHub](https://github.com/apps/ve
 This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill, as I'm f\*\* tired of having to do 3+ interviews that aren't related to coding, take hours of my time to create projects from scratch as "coding challenges" just to get a job as a contractor somewhere, if I'm able to convince the PMs and POs to allocate someone to code review this project instead of asking me about what I was working on 3 years ago like it defined my current skill-set and interests it will hopefully lessen the burden of proof of skill on my part.
 This project is a good example of how I would normally code and perform on real applications.
 A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) although bear in mind that it does not accurately represent my abilities and stack preferences anymore.
-This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent of a real final product.
+This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent and challenges of a real final product.

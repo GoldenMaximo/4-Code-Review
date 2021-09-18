@@ -79,7 +79,7 @@ Before testing, make sure that you have configured the `cypress.json` file with 
     }
 ```
 
-Also make sure that the port you have set on `cypress.json` matches the ports set on the `package.json` scripts and that you have previously set the `NEXT_PUBLIC_NASA_APOD_KEY` property on `.env`.
+Also, make sure that the port you have set on `cypress.json` matches the ports set on the `package.json` scripts and that you have previously set the `NEXT_PUBLIC_NASA_APOD_KEY` property on `.env`.
 
 After having configured everything, you can run the tests with:
 
@@ -103,7 +103,13 @@ TODO: https://developer.mozilla.org/en-US/docs/Web/Manifest?utm_source=devtools&
 
 ## CI/CD
 
-TODO: Cypress
+### CI
+
+Continuous Integration is done using Cypress together with [GitHub Actions](https://github.com/features/actions), you can check out the project's runs @ its [Cypress Dashboard](https://dashboard.cypress.io/projects/p21ze9/)
+
+### CD
+
+Continuous Delivery is done using [Vercel for GitHub](https://github.com/apps/vercel)
 
 ## Known issues
 
@@ -117,7 +123,9 @@ TODO: Cypress
 -   Do not create /components level components unless you plan to use them in more than one page/component.
 -   Texts are stored in `texts` object variables with alphabet letters as key and text as value, it sucks but I haven't found anything better yet. Alternative pattern suggestions are welcome.
 -   As mentioned previously above, all endpoints must be declared on the .env file.
--   Testing could be better, the project lacks unit testing and has an extremely limited coverage of edge cases by the current integration/e2e testing done with Cypress.
+-   Testing could be better, the project lacks unit testing and has extremely limited coverage of edge cases by the current integration/e2e testing done with Cypress.
+-   Commits must be done following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
+-   If more than one person ever works in this project, ideally I would prefer that all GIT management be done following [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
 
 ## Things to keep in mind for auditing
 
@@ -134,7 +142,7 @@ TODO: Cypress
 
 ## Meta
 
-This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill, as I'm f\*\* tired of having to do 3+ interviews that aren't related to coding, take hours of my time to create projects from scratch as "coding challenges" just to get a job as a contractor somewhere, if I'm able to convince the PMs and POs to allocate someone to code review this project instead of asking me about what I was working on 3 years ago like it defined my current skill-set and interests it will hopefully lessen the burden of proof of skill on my part.
-This project is a good example of how I would normally code and perform on real applications.
-A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) although bear in mind that it does not accurately represent my abilities and stack preferences anymore.
-This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent of a real final product.
+This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill, as I'm f\*\* tired of having to do 3+ interviews that aren't related to coding, take hours of my time to create projects from scratch as "coding challenges" just to get a job as a contractor somewhere, if I'm able to convince the PMs and POs to allocate someone to code review this project instead of asking me about what I was working on 3 years ago like it defined my current skill-set and interests it will hopefully lessen the burden of proof of skill on my part.
+This project is a good example of how I would normally code and perform on real applications.
+A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) although bear in mind that it does not accurately represent my abilities and stack preferences anymore.
+This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent of a real final product.

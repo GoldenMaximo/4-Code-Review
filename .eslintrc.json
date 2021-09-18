@@ -32,11 +32,7 @@
         ],
         "prettier/prettier": "error",
         "indent": [
-            2,
-            4,
-            {
-                "SwitchCase": 1
-            }
+            0
         ],
         "quotes": [
             "error",

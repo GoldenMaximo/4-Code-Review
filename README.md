@@ -43,11 +43,11 @@ NEXT_PUBLIC_NASA_PLANETARY_ENDPOINT=* (E.g: https://api.nasa.gov/planetary/)
 NEXT_PUBLIC_NASA_APOD_KEY=*
 ```
 
-_The planetary endpoint could very well be fixed. However, setting all endpoints on .env is a project pattern I impose._
+_The planetary endpoint could very well be fixed. However, setting all endpoints on `.env` is a project pattern I impose._
 
 ## Running
 
-After having installed the dependencies and having configured .env, you can then build the application with:
+After having installed the dependencies and having configured `.env`, you can then build the application with:
 
 ```
 npm run build
@@ -125,7 +125,7 @@ This project supports PWA:
 
 ### CI
 
-Continuous Integration is done using Cypress together with [GitHub Actions](https://github.com/features/actions), you can check out the project's runs @ its [Cypress Dashboard](https://dashboard.cypress.io/projects/p21ze9/).
+Continuous Integration is done using [GitHub Actions](https://github.com/features/actions) together with Cypress, you can check out the project's runs @ its [Cypress Dashboard](https://dashboard.cypress.io/projects/p21ze9/).
 
 ### CD
 
@@ -148,9 +148,9 @@ _As of right now there is only one known vulnerability in the project caused by 
 ## Things to keep in mind for further development
 
 -   Pages must have .page.tsx exention.
--   Do not create /components level components unless you plan to use them in more than one page/component.
+-   Do not create `./components` level components unless you plan to use them in more than one page or component.
 -   Texts are stored in `texts` object variables with alphabet letters as key and text as value, it sucks but I haven't found anything better yet. Alternative pattern suggestions are welcome.
--   As mentioned previously above, all endpoints must be declared on the .env file.
+-   As mentioned previously above, all endpoints must be declared on the `.env` file.
 -   Testing could be better, the project lacks unit testing and has extremely limited coverage of edge cases by the current integration/e2e testing done with Cypress.
 -   Commits must be done following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
 -   If more than one person ever works in this project, ideally I would prefer that all GIT management be done following [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
@@ -172,6 +172,7 @@ _As of right now there is only one known vulnerability in the project caused by 
 ## Meta
 
 This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill, as I'm f\*\* tired of having to do 3+ interviews that aren't related to coding, take hours of my time to create projects from scratch as "coding challenges" just to get a job as a contractor somewhere, if I'm able to convince the PMs and POs to allocate someone to code review this project instead of asking me about what I was working on 3 years ago like it defined my current skill-set and interests it will hopefully lessen the burden of proof of skill on my part.
+
 This project is a good example of how I would normally code and perform on real applications.
 A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) although bear in mind that it does not accurately represent my abilities and stack preferences anymore.
-This project is a closer rendition of what I would do in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent and challenges of a real final product.
+_4-Code-Review_ is a closer rendition of how I work in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent and challenges of a real product/project.

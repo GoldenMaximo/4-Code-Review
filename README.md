@@ -101,13 +101,33 @@ npm run e2e:headless
 
 ## Performance
 
-_Performance metrics were measured with the help of [DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse/)._
+_Performance metrics were measured with the help of [DevTools Lighthouse](https://developers.google.com/web/tools/lighthouse/) & [Vercel Analytics](https://vercel.com/analytics)._
+
+#### Overall Lighthouse score of the `/` page:
 
 ![](demo/DevTools_Lighthouse_Score.png)
 
-Here's a performance snapshot of the entire flow of the app:
+#### Overall Lighthouse score of the `/search` page:
+
+![](demo/DevTools_Lighthouse_Score_Search_Page.png)
+
+#### Detailed performance snapshot of the entire flow of the app:
 
 ![](demo/DevTools_Performance_Snapshot_Of_Whole_App.png)
+
+#### Vercel desktop performance analytics:
+
+![](demo/desktop_analytics.png)
+
+#### Mobile performance analytics:
+
+![](demo/mobile_analytics.png)
+
+#### Performance by page:
+
+![](demo/analytics_by_page.png)
+
+_These are small samples collected with a very limited number of devices, the real performance scores may differ for better or for worse._
 
 ## Mobile & PWA
 

@@ -2,7 +2,7 @@
 
 > A client-side application that queries the GitHub API with a little bit of NASA imagery sprinkled on top.
 
-## [:fire: Deployed HERE :fire:](https://4-code-review.vercel.app/) - ![End-to-end tests](https://github.com/GoldenMaximo/4-Code-Review/actions/workflows/main.yml/badge.svg) ![Known Vulnerabilities](https://snyk.io/test/github/GoldenMaximo/4-Code-Review/badge.svg)
+## [:fire: Deployed HERE :fire:](https://4-code-review.vercel.app/) - ![End-to-end tests](https://github.com/GoldenMaximo/4-Code-Review/actions/workflows/main.yml/badge.svg) ![If you're seeing this text please reload the page](https://snyk.io/test/github/GoldenMaximo/4-Code-Review/badge.svg)
 
 ## DEMO:
 

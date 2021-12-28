@@ -175,6 +175,7 @@ _As of right now there is only one known vulnerability in the project caused by 
 -   Commits must be done following [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0-beta.2/).
 -   If more than one person ever works in this project, ideally I would prefer that all GIT management be done following [Trunk-based development](https://www.atlassian.com/continuous-delivery/continuous-integration/trunk-based-development).
 -   Cypress CI queries for a `package-lock.json` that matches the project's `package.json` during the CI build phase. Meaning that, while you could use pnpm and yarn to manage dependencies, you'll always have to make sure that the project's `package-lock.json` is up to date. It's a hassle to the point it made me abandon pnpm/yarn and just use npm instead.
+-   There should be a skeleton of the layout during loading and page transitions. Or at least a loading spinner on all loading items.
 
 ## Things to keep in mind for auditing
 

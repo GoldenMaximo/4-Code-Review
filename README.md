@@ -189,10 +189,3 @@ _As of right now there is only one known vulnerability in the project caused by 
 -   [Premature optimization is the root of all evil | Donald Knuth and Lex Fridman
     ](https://youtu.be/74RdET79q40)
 
-## Meta
-
-This entire project was overdone (too big of a stack for such a small feature-set) with the sole intent and purpose of showcasing skill, as I'm f\*\* tired of having to do 3+ interviews that aren't related to coding, take hours of my time to create projects from scratch as "coding challenges" just to get a job as a contractor somewhere, if I'm able to convince the PMs and POs to allocate someone to code review this project instead of asking me about what I was working on 3 years ago like it defines my current skill-set and interests it will hopefully lessen the burden of proof of skill on my part.
-
-This project is a good example of how I would normally code and perform on real applications.
-A similar project concept can be found [here](https://github.com/GoldenMaximo/Github-User-Query) although bear in mind that it does not accurately represent my abilities and stack preferences anymore.
-_4-Code-Review_ is a closer rendition of how I work in a real project. Nevertheless, the core concept and small feature set are too simple to properly and accurately depict the full extent and challenges of a real product/project.
